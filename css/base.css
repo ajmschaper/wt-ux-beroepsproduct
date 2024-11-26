@@ -1,0 +1,203 @@
+/* -------------------- Root Defaults -------------------- */
+:root {
+    --clr-primary-black: #000;
+    --clr-secondary-black: #16181a;
+    --clr-primary-white: #fff;
+    --clr-secondary-white: #f0ede9;
+    --clr-primary-green: #00B05F;
+    --clr-primary-red: #CB281F;
+    --clr-primary-hr: #dbdbdb;
+}
+
+/* -------------------- Base Styling -------------------- */
+
+* {
+    background-color: var(--clr-secondary-white);
+}
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    text-decoration: none; 
+    list-style-type: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p { 
+    margin: 0; 
+    font-weight: normal; 
+    background-color: var(--clr-primary-white);
+}
+
+.container { 
+    margin: 0 auto; 
+    width: 1440px;
+}
+
+a, p { 
+    font-size: 1rem;
+}
+
+
+/*--------------------------------------------------------------
+# Common CSS 
+--------------------------------------------------------------*/
+
+/* ---------- Colour Schemes ---------- */
+.bg-primary-colour-scheme { 
+    color: var(--clr-primary-white); 
+    background-color: var(--clr-primary-green); 
+}
+
+.bg-secondary-colour-scheme { 
+    color: var(--clr-primary-white); 
+    background-color: var(--clr-primary-red); 
+}
+
+.bg-white {
+    background-color: var(--clr-primary-white);  
+}
+
+.text-primary-colour {
+    color: var(--clr-primary-white); 
+}
+
+.text-secondary-colour {
+    color: var(--clr-primary-black); 
+}
+
+
+/* ---------- Hover Effects ---------- */
+a:hover, li a:hover { 
+    opacity: 60%; 
+    transition-duration: 0.7s; 
+    color: var(--clr-primary-red);
+}
+
+.img-hover:hover { 
+    -webkit-filter: brightness(0.7); 
+    filter: brightness(0.7); 
+    transition-duration: 0.7s; 
+}
+
+.button-hover:hover { 
+    opacity: 60%; 
+    transition-duration: 0.7s; 
+}
+
+/* ---------- Text Transforms ---------- */
+.capitalize { 
+    text-transform: capitalize; 
+}
+
+.uppercase { 
+    text-transform: uppercase; 
+}
+
+.lowercase { 
+    text-transform: lowercase; 
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: var(--clr-primary-white);
+    background-color: var(--clr-primary-green);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: var(--clr-primary-white);
+    background-color: var(--clr-primary-red);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary:active, .btn-secondary:active {
+    transform: scale(0.95);
+}
+
+/* -------------------- Flexbox -------------------- */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.horizontal-flex-start {
+    justify-content: flex-start;
+}
+
+.horizontal-flex-end {
+    justify-content: flex-end;
+}
+
+.vertical-flex-start {
+    align-items: flex-start;
+}
+
+.vertical-flex-end {
+    align-items: flex-end;
+}
+
+.vertical-flex-center {
+    align-items: center;
+}
+
+.horizontal-flex-start-self {
+    margin-right: auto
+}
+
+.horizontal-flex-end-self {
+    margin-left: auto
+}
+
+/* -------------------- Grid -------------------- */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.grid-item {
+    background-color: var(--clr-primary-white);
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+.grid-item h3 {
+    margin: 10px;
+}
+
+.grid-item p {
+    padding: 0 10px 10px 10px;
+}
+
+.grid-button {
+    margin: 0 10px 10px 0;
+}
